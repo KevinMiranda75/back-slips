@@ -1,0 +1,33 @@
+# Node modules
+node_modules/
+
+# Archivos de entorno
+.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Dependencias locales o temporales
+.cache/
+.tmp/
+
+# Salida de builds
+dist/
+build/
+
+# Archivos de pruebas temporales
+coverage/
+
+# Archivos de configuración de editores
+.vscode/
+.idea/
+
+# Otros posibles archivos ocultos de sistema/editor
+*.swp
+*.swo
