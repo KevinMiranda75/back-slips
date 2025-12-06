@@ -30,6 +30,22 @@ app.get("/update", async (req, res) => {
       }
 });
 
+app.get("/nfts", async (req, res) => {
+  try {
+    const response = await Moralis.EvmApi.nft.getWalletNFTs({
+      chain: "0x7e4", // red Ronin
+      address: "0x99DF0c1D9DF2924Fa5580cD2D897D220a7688952",
+      format: "decimal", // muestra IDs como número normal
+      limit: 50, // máximo de NFTs que traerá por solicitud
+    });
+    res.send(response.raw);
+  } catch (e) {
+    console.error(e);
+    res.status(500).send("Error al obtener NFTs");
+  }
+});
+
+
 
 const startServer = async () => {
     await Moralis.start({
